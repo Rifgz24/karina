@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3d7e3">
+    <title>For Karina | A Little Birthday Surprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="petal-field" aria-hidden="true"></div>
+
+
+
+    <div class="password-screen" id="passwordScreen" role="dialog" aria-label="Enter the birthday password">
+        <div class="password-content">
+            <p class="eyebrow blush">the next little secret</p>
+            <h2>Unlock Karina's<br><em>birthday surprise.</em></h2>
+            <div class="password-dots" id="passwordDots" aria-label="Password entry"><i></i><i></i><i></i><i></i></div>
+            <p class="password-hint" id="passwordHint">enter the four digit password</p>
+            <div class="keypad" id="keypad"><button type="button" data-key="1">1</button><button type="button"
+                    data-key="2">2</button><button type="button" data-key="3">3</button><button type="button"
+                    data-key="4">4</button><button type="button" data-key="5">5</button><button type="button"
+                    data-key="6">6</button><button type="button" data-key="7">7</button><button type="button"
+                    data-key="8">8</button><button type="button" data-key="9">9</button><button type="button"
+                    class="key-empty" tabindex="-1" aria-hidden="true"></button><button type="button"
+                    data-key="0">0</button><button type="button" class="key-delete" data-key="delete"
+                    aria-label="Delete last digit">⌫</button></div>
+            <p class="password-hint-bottom" style="margin-top: 24px; font-size: 10px; color: var(--muted); letter-spacing: .12em;">hint: your birthday</p>
+        </div>
+        <audio id="clickSfx" src="assets/music/click.mp3" preload="auto"></audio>
+        <audio id="shapeSong" src="assets/music/shape-of-my-heart.flac" preload="auto"></audio>
+    </div>
+
+    <div class="entry-screen is-hidden" id="entryScreen" role="dialog" aria-label="Birthday surprise welcome">
+        <button class="entry-button" id="enterButton" type="button">
+            <span class="gift-icon" aria-hidden="true"><span></span></span>
+            <span class="eyebrow">A LITTLE BIRTHDAY SURPRISE</span>
+            <strong>TAP ANYWHERE</strong>
+            <span class="entry-line"></span>
+        </button>
+    </div>
+    <div class="flower-burst" id="flowerBurst" aria-hidden="true"></div>
+
+    <main id="mainContent" class="is-hidden">
+        <section class="hero" id="top">
+            <div class="hero-copy reveal">
+                <p class="eyebrow blush">happy birthday, karina</p>
+                <h1>To The Prettiest<br><em>Girl, Karina</em></h1>
+                <div class="heart-wrap" aria-label="A heart for Karina"><span class="heart">♥</span></div>
+                <p class="hero-note">A small corner of the internet, made just for you.</p>
+            </div>
+            <a class="scroll-cue" href="#counter"><span>SCROLL TO EXPLORE</span><b>↓</b></a>
+        </section>
+
+        <section class="section counter-section" id="counter">
+            <div class="section-heading reveal">
+                <p class="eyebrow blush">time your existence</p>
+                <h2>On This Earth</h2>
+                <span class="heading-rule"></span>
+            </div>
+            <div class="counter-grid" id="counterGrid" aria-label="Time since Karina's birth"></div>
+        </section>
+
+        <section class="section message-section">
+            <div class="message-card reveal">
+                <span class="card-mark">✦</span>
+                <p class="eyebrow blush">a note for you</p>
+                <h2>Wishing You The<br><em>Happiest Of Birthdays.</em></h2>
+                <p>Another year older, and somehow you keep getting better. I wanted to make something a little
+                    different for your birthday this year. Consider this a small reminder of how much you mean to me,
+                    and to everyone lucky enough to have you in their lives.</p>
+                <p class="signature">- Rifki</p>
+            </div>
+        </section>
+
+        <section class="section loves-section" id="loves">
+            <div class="section-heading reveal">
+                <p class="eyebrow blush">six little reasons</p>
+                <h2>Things I Love About You</h2>
+                <span class="heading-rule"></span>
+            </div>
+            <div class="love-grid">
+                <button class="love-card reveal" type="button"><span class="card-front"><span
+                            class="lock">⌑</span><b>Your Energy</b><small>Tap to reveal</small></span><span
+                        class="card-back"><span class="lock">⌑</span><b>Your Energy</b><small class="card-text">u just make every room feel different when ur there, honestly. like ur energy is contagious and everyone feels it. i really enjoy having u around bc u bring smth special that i cant really describe, but its genuine.</small></span></button>
+                <button class="love-card reveal" type="button"><span class="card-front"><span
+                            class="lock">⌑</span><b>Your Humor</b><small>Tap to reveal</small></span><span
+                        class="card-back"><span class="lock">⌑</span><b>Your Humor</b><small class="card-text">u make me laugh more than i expect to, and thats rly cool abt u. ur able to find smth funny in everything and u share that with me. i appreciate having someone who gets my humor and keeps things light, honestly.</small></span></button>
+                <button class="love-card reveal" type="button"><span class="card-front"><span
+                            class="lock">⌑</span><b>Your Drive</b><small>Tap to reveal</small></span><span
+                        class="card-back"><span class="lock">⌑</span><b>Your Drive</b><small class="card-text">the way u go after what u want is inspiring, fr. u dont give up and u believe in urself even when things get hard. i respect that abt u so much and i like seeing u chase ur dreams. its motivating.</small></span></button>
+                <button class="love-card reveal" type="button"><span class="card-front"><span
+                            class="lock">⌑</span><b>Your Heart</b><small>Tap to reveal</small></span><span
+                        class="card-back"><span class="lock">⌑</span><b>Your Heart</b><small class="card-text">ur genuinely kind to people and u actually care, which is rare honestly. u listen when i talk and u remember the things that matter to me. that means a lot to me and i dont take it for granted.</small></span></button>
+                <button class="love-card reveal" type="button"><span class="card-front"><span
+                            class="lock">⌑</span><b>Your Style</b><small>Tap to reveal</small></span><span
+                        class="card-back"><span class="lock">⌑</span><b>Your Style</b><small class="card-text">u just have ur own thing going on and thats cool. the way u carry urself and how u express urself is authentic and i respect that. u dont try too hard and that authenticity is what makes u stand out.</small></span></button>
+                <button class="love-card reveal" type="button"><span class="card-front"><span
+                            class="lock">⌑</span><b>Your Friendship</b><small>Tap to reveal</small></span><span
+                        class="card-back"><span class="lock">⌑</span><b>Your Friendship</b><small class="card-text">having u as someone i can talk to and spend time with is rly valuable to me. ur someone i genuinely enjoy being around and i hope u know that. i value what we have and i dont want to lose it.</small></span></button>
+            </div>
+        </section>
+
+        <section class="section moments-section" id="moments">
+            <div class="season-tabs reveal" role="tablist" aria-label="Seasons">
+                <button class="season active" type="button" data-season="spring" role="tab"
+                    aria-selected="true"><i>✿</i><span>Spring</span></button>
+                <button class="season" type="button" data-season="summer" role="tab"
+                    aria-selected="false"><i>☼</i><span>Summer</span></button>
+                <button class="season" type="button" data-season="autumn" role="tab"
+                    aria-selected="false"><i>⌁</i><span>Autumn</span></button>
+                <button class="season" type="button" data-season="winter" role="tab"
+                    aria-selected="false"><i>✧</i><span>Winter</span></button>
+            </div>
+            <div class="gallery-heading reveal">
+                <p class="eyebrow blush">a little photo album</p>
+                <h2>Some Of Your<br><em>Best Times</em></h2>
+            </div>
+            <div class="gallery-grid">
+                <figure class="photo photo-tall reveal"><img data-gallery-index="0" src="assets/photos/card-1.jpg"
+                        alt="Your Energy"></figure>
+                <figure class="photo photo-wide reveal"><img data-gallery-index="1" src="assets/photos/card-2.jpg"
+                        alt="Your Humor"></figure>
+                <figure class="photo photo-small reveal"><img data-gallery-index="2" src="assets/photos/card-3.jpg"
+                        alt="Your Drive"></figure>
+                <figure class="photo photo-medium reveal"><img data-gallery-index="3" src="assets/photos/card-4.jpg"
+                        alt="Your Heart"></figure>
+                <figure class="photo photo-wide reveal"><img data-gallery-index="4" src="assets/photos/card-5.jpg"
+                        alt="Your Style"></figure>
+                <figure class="photo reveal"><img data-gallery-index="5" src="assets/photos/card-6.jpg"
+                        alt="Your Friendship"></figure>
+            </div>
+        </section>
+
+        <footer class="footer section">
+            <span class="footer-star">✦</span>
+            <p class="eyebrow blush">one last thing</p>
+            <h2>Have The<br><em>Best Day Ever</em></h2>
+            <p class="footer-copy">Take a second today to just breathe and enjoy it. Eat too much cake, make a wish, and
+                have a great time celebrating. You deserve a perfect birthday.</p>
+            <button class="celebrate-button" id="celebrateButton" type="button">celebrating... <span>↗</span></button>
+            <p class="copyright">made with love, for karina <span>♥</span></p>
+        </footer>
+    </main>
+
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoTitle"
+        aria-hidden="true">
+        <div class="vhs-frame">
+            <button class="close-modal" id="closeModal" type="button">CLOSE <b>×</b></button>
+            <p class="vhs-label" id="videoTitle">A SECRET JUST FOR YOU</p>
+            <div class="screen">
+                <video class="placeholder-video"
+                    src="https://www.youtube.com/embed/OT5msu-dap8" muted loop controls
+                    aria-label="Birthday video calibration"></video>
+                <div class="scanlines"></div>
+                <div class="calibration"><span>VIDEO CALIBRATION</span><b>▶</b><small>PLAYBACK / 01:00:00</small></div>
+                <div class="static"></div>
+            </div>
+            <p class="vhs-footer">Here Is To Many More Birthdays Together.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
